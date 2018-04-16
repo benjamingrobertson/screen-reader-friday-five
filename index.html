@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Five Things You Didn't Realize Affect a Screen Reader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Five Things You Didn't Realize Affect a Screen Reader</h1>
+  <h2>1. Image Alt Tags</h2>
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Bad Alt Text</h3>
+      <img src="http://spaceholder.cc/450x300" alt="48597238ca0d9e8410298c.jpeg">
+    </div>
+    <div class="grid-item">
+      <h3>Good Alt Text</h3>
+      <img src="http://spaceholder.cc/450x300" alt="Sample alt text">
+    </div>
+  </div>
+
+  <h2>2. Flex Order</h2>
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Bad Flex Order</h3>
+      <ul class="flex-items flex-items--reordered">
+        <li class="flex-item">First</li>
+        <li class="flex-item">Second</li>
+        <li class="flex-item">Third</li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h3>Normal Flex Order</h3>
+      <ul class="flex-items">
+        <li class="flex-item">First</li>
+        <li class="flex-item">Second</li>
+        <li class="flex-item">Third</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>3. Button onClick Events</h2>
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Bad Button</h3>
+      <div class="button" onClick="alert('you clicked');">Click Me</div>
+    </div>
+    <div class="grid-item">
+      <h3>Good Button</h3>
+      <button class="button" onClick="alert('you clicked');">Click Me</button>
+    </div>
+  </div>
+
+  <h2>4. Inputs without Labels</h2>
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Bad</h3>
+      <div class="input-wrap">
+        <input class="email-input" type="email" name="email-1" id="email-1" placeholder="Email" />
+      </div>
+
+    </div>
+    <div class="grid-item">
+      <h3>Better</h3>
+      <div class="input-wrap">
+        <input class="email-input" type="email" name="email-2" id="email-2" />
+        <label for="email-2">Email</label>
+      </div>
+    </div>
+  </div>
+
+  <h2>5. The Section Element</h2>
+  <div class="grid">
+    <div class="grid-item">
+      <h3>No ARIA Label</h3>
+      <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sunt temporibus nihil beatae odio tempora, nesciunt, et vel aliquid delectus eius ratione obcaecati ut consequatur itaque nobis eveniet unde asperiores?</p>
+      </section>
+    </div>
+    <div class="grid-item">
+      <h3>With ARIA Label</h3>
+      <section aria-label="Sample Region">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, accusantium dolores dicta laboriosam reprehenderit cumque voluptatibus repudiandae consequatur nulla necessitatibus nemo, saepe tempora, magnam non eveniet reiciendis corrupti! Quia, repellendus?</p>
+      </section>
+    </div>
+  </div>
+
+  <a href="http://example.com" target="_blank">Example</a>
+  <a href="http://example.com">Example</a>
+  <a href="#" onclick="console.log('test');">Example Link</a>
+
+</body>
+</html>
